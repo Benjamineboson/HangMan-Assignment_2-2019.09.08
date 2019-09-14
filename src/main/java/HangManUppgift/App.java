@@ -16,8 +16,8 @@ public class App {
             keepAlive = test.isFound();
             if (test.getMaxGuesses() <= test.getUsedGuesses()){
                 keepAlive = true;
+                test.printMethod(6);
             }
         }while (!keepAlive);
-        test.printMethod(6);
     }
 }

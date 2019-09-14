@@ -1,7 +1,5 @@
 package HangManUppgift.model;
 
-import java.util.Scanner;
-
 public class HangMan {
     private String secretWord;
     private char[] wordBeingBuilt;
@@ -16,14 +14,6 @@ public class HangMan {
         this.guessedLetters = new StringBuilder();
         this.maxGuesses = 8;
         this.usedGuesses = 0;
-    }
-
-    public String getSecretWord() {
-        return secretWord;
-    }
-
-    public char[] getWordBeingBuilt() {
-        return wordBeingBuilt;
     }
 
     public StringBuilder getGuessedLetters() {
@@ -99,7 +89,7 @@ public class HangMan {
             }
             System.out.println("\nGuesses remaining: "+(maxGuesses-usedGuesses));
         }else if (choice == 2){
-            System.out.println("\nYou Win!");
+            System.out.println("\nYou Win!\n O - [Thanks!]\n/|\\\n/ \\");
         }else if (choice == 3){
             System.out.println(guessedLetters.toString());
         }else if (choice == 4){

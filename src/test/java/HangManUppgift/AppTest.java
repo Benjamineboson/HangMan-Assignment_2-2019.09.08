@@ -11,7 +11,9 @@ public class AppTest
 
     private HangMan testObject;
 
-    // TEST
+    /**
+     * For test purpose
+     */
 //    @Before
 //    public void init (){
 //    testObject = new HangMan("Test".toUpperCase());

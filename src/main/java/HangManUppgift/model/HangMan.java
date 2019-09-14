@@ -16,6 +16,7 @@ public class HangMan {
         this.usedGuesses = 0;
     }
 
+
     public StringBuilder getGuessedLetters() {
         return guessedLetters;
     }
@@ -28,6 +29,10 @@ public class HangMan {
         return usedGuesses;
     }
 
+    public String getSecretWord() {
+        return secretWord;
+    }
+
     public String buildUnderScore(){
         if (guessedLetters.toString().length() < 1 )
             for (int i = 0; i < wordBeingBuilt.length; i++) {
@@ -35,6 +40,7 @@ public class HangMan {
             }
         return String.valueOf(wordBeingBuilt);
     }
+
 
     public String playTheGame(String guess) {
             if (guess.length() < 2) {
@@ -52,6 +58,7 @@ public class HangMan {
                     }
                     guessedLetters.append("["+guess.charAt(0)+"]");
                     printMethod(3);
+                    printMethod(5);
                 } else {
                     if (guessedLetters.toString().contains(guess)) {
                         printMethod(8);
@@ -104,7 +111,7 @@ public class HangMan {
             else if (usedGuesses == 7) { System.out.println("|‾‾‾‾‾‾‾‾|\n|\t\t O\n|\t\t/|\\\n|\t\t/\n☐‾‾‾‾‾‾‾☐"); }
             else if (usedGuesses == 8) {  System.out.println("|‾‾‾‾‾‾‾‾|\n|\t\t O\n|\t\t/|\\\n|\t\t/ \\\n☐‾‾‾‾‾‾‾☐"); }
         }else if (choice == 6){
-            System.out.println("You Lose!");
+            System.out.println("You Lose!\nThe secret word was: "+getSecretWord());
         }else if (choice == 7){
             System.out.println("Wrong Guess!\nGuess the secret word: ");
         }else if (choice == 8){

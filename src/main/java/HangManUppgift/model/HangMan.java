@@ -7,7 +7,7 @@ public class HangMan {
     private int maxGuesses;
     private int usedGuesses;
 
-    // TEST: String SecretWord
+    // TEST: String secretWord
     public HangMan() {
         this.secretWord = SecretWordGenerator.chooseSecretWord(); //TEST: secretWord;
         this.wordBeingBuilt = new char[secretWord.length()];
@@ -59,6 +59,7 @@ public class HangMan {
                     guessedLetters.append("["+guess.charAt(0)+"]");
                     printMethod(3);
                     printMethod(5);
+                                               //For test purpose; return "Letter appended";
                 } else {
                     if (guessedLetters.toString().contains(guess)) {
                         printMethod(8);

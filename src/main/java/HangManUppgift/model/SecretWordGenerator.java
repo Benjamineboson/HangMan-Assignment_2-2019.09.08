@@ -15,7 +15,7 @@ public class SecretWordGenerator {
     public static String chooseSecretWord() {
         Random random = new Random();
         String[] wordList = wordlistToArray(file);
-        String secretWord = wordList[random.nextInt(wordList.length)].toUpperCase();
+        String secretWord = wordList[random.nextInt(wordList.length)].toUpperCase(); //"TEST"
         return secretWord;
     }
 

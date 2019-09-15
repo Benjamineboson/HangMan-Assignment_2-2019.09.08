@@ -1,10 +1,13 @@
 package HangManUppgift;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
 import HangManUppgift.model.HangMan;
+import HangManUppgift.model.SecretWordGenerator;
+import org.junit.Before;
 import org.junit.Test;
+
+import java.io.File;
+
+import static org.junit.Assert.*;
 
 public class AppTest 
 {
@@ -20,7 +23,7 @@ public class AppTest
 //    }
 
   @Test
-  public void test_Word_Being_Built_Display(){
+  public void test_Play_The_Game(){
       char[] test = new char[4];
       test[0] = 't';
       test[1] = 'e';
@@ -31,8 +34,15 @@ public class AppTest
       assertEquals(expected,actual);
   }
 
+  @Test
+  public void test_Play_The_Game_Add_Letter(){
+  String expected = "Letter appended";
+  String actual = testObject.playTheGame("S");
+  assertEquals(expected,actual);
+  }
+
     @Test
-    public void test_Word_Being_Built_Display_Wrong_Guess(){
+    public void test_Play_The_Game_Wrong_Guess(){
         char[] test = new char[4];
         test[0] = 't';
         test[1] = 'e';
@@ -44,7 +54,7 @@ public class AppTest
     }
 
     @Test
-    public void test_Word_Being_Built_Display_Guessing_Used_Letter_Contained(){
+    public void test_Play_The_Game_Guessing_Used_Letter_Contained(){
         testObject.getGuessedLetters().append("S");
         String inPut = "S";
         String expected = "You already guessed that letter";
@@ -53,7 +63,7 @@ public class AppTest
     }
 
     @Test
-    public void test_Word_Being_Built_Display_Guessing_Used_Letter_Not_Contained(){
+    public void test_Play_The_Game_Guessing_Used_Letter_Not_Contained(){
         testObject.getGuessedLetters().append("R");
         String inPut = "R";
         String expected = "You already guessed that letter";
@@ -68,5 +78,19 @@ public class AppTest
         String expected = "____";
         String actual = testObject.buildUnderScore();
         assertEquals(expected,actual);
+    }
+
+    @Test
+    public void test_Choose_Secret_Word(){
+        String expected = "TEST";
+        String actual = SecretWordGenerator.chooseSecretWord();
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void test_Call_Wrong_File(){
+        File test = new File("");
+        String[] actual = SecretWordGenerator.wordlistToArray(test);
+        assertArrayEquals(null,actual);
     }
 }

@@ -105,12 +105,12 @@ public class HangMan {
         }else if (choice == 5){
             if (usedGuesses == 1) { System.out.println("|‾‾‾‾‾‾‾‾\n|\n|\n|\n☐‾‾‾‾‾‾‾☐"); }
             else if (usedGuesses == 2) { System.out.println("|‾‾‾‾‾‾‾‾|\n|\n|\n|\n☐‾‾‾‾‾‾‾☐"); }
-            else if (usedGuesses == 3) { System.out.println("|‾‾‾‾‾‾‾‾|\n|\t\t O\n|\n|\n☐‾‾‾‾‾‾‾☐"); }
-            else if (usedGuesses == 4) { System.out.println("|‾‾‾‾‾‾‾‾|\n|\t\t O\n|\t\t |\n|\n☐‾‾‾‾‾‾‾☐"); }
-            else if (usedGuesses == 5) { System.out.println("|‾‾‾‾‾‾‾‾|\n|\t\t O\n|\t\t/|\n|\n☐‾‾‾‾‾‾‾☐"); }
-            else if (usedGuesses == 6) { System.out.println("|‾‾‾‾‾‾‾‾|\n|\t\t O\n|\t\t/|\\\n|\n☐‾‾‾‾‾‾‾☐"); }
-            else if (usedGuesses == 7) { System.out.println("|‾‾‾‾‾‾‾‾|\n|\t\t O\n|\t\t/|\\\n|\t\t/\n☐‾‾‾‾‾‾‾☐"); }
-            else if (usedGuesses == 8) {  System.out.println("|‾‾‾‾‾‾‾‾|\n|\t\t O\n|\t\t/|\\\n|\t\t/ \\\n☐‾‾‾‾‾‾‾☐"); }
+            else if (usedGuesses == 3) { System.out.println("|‾‾‾‾‾‾‾‾|\n|\t\t O - [You got this!]\n|\n|\n☐‾‾‾‾‾‾‾☐"); }
+            else if (usedGuesses == 4) { System.out.println("|‾‾‾‾‾‾‾‾|\n|\t\t O - [Concentrate!]\n|\t\t |\n|\n☐‾‾‾‾‾‾‾☐"); }
+            else if (usedGuesses == 5) { System.out.println("|‾‾‾‾‾‾‾‾|\n|\t\t O - [You do know how to play this game right?]\n|\t\t/|\n|\n☐‾‾‾‾‾‾‾☐"); }
+            else if (usedGuesses == 6) { System.out.println("|‾‾‾‾‾‾‾‾|\n|\t\t O - [You need to guess the secret word stupid...]\n|\t\t/|\\\n|\n☐‾‾‾‾‾‾‾☐"); }
+            else if (usedGuesses == 7) { System.out.println("|‾‾‾‾‾‾‾‾|\n|\t\t\\O/ - [GUESS THE WORD NOOB!]\n|\t\t |\n|\t\t/\n☐‾‾‾‾‾‾‾☐"); }
+            else if (usedGuesses == 8) {  System.out.println("|‾‾‾‾‾‾‾‾|\n|\t\t O - [I never should have trusted a programmer...]\n|\t\t/|\\\n|\t\t/ \\\n☐‾‾‾‾‾‾‾☐"); }
         }else if (choice == 6){
             System.out.println("You Lose!\nThe secret word was: "+getSecretWord());
         }else if (choice == 7){

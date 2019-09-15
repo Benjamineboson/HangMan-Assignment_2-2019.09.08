@@ -96,7 +96,7 @@ public class HangMan {
             }
             System.out.println("\nGuesses remaining: "+(maxGuesses-usedGuesses));
         }else if (choice == 2){
-            System.out.println("\nYou Win!\n O - [Thanks!]\n/|\\\n/ \\");
+            System.out.println("\nYou Win!\n\\O - [Thanks!]\n |\\\n/ \\");
         }else if (choice == 3){
             System.out.println(guessedLetters.toString());
         }else if (choice == 4){
